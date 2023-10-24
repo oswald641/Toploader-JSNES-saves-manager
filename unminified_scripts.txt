@@ -1,0 +1,36 @@
+--export save
+var element = document.createElement('a');
+element.setAttribute('href', 'data:text/plain,' + encodeURIComponent(localStorage.getItem(gameName)));
+element.setAttribute('download', gameName+".nsav");
+
+element.style.display = 'none';
+document.body.appendChild(element);
+
+element.click();
+
+document.body.removeChild(element);
+
+--import save
+var sav = document.createElement('input');
+sav.setAttribute('type','file');
+sav.setAttribute('id','sav');
+sav.setAttribute('oninput','loadSav()');
+
+sav.classList.add("button");
+document.body.appendChild(sav);
+
+function loadSav() {
+	sav.files[0].text().then(text => loadSav2(text));
+}
+
+function loadSav2(text) {
+	let name = sav.files[0].name;
+	if(name.endsWith(".nsav")) {
+		name = name.replace(/(.+)\.nsav$/gm,"$1");
+		localStorage.setItem(name, text);
+		window.alert("save imported successfully");
+		document.body.removeChild(sav);
+	}
+	else
+		window.alert("file isn't an .nsav");
+}

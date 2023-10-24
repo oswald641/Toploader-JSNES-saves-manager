@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title> TL - JSNES saves manager </title>
+		<link rel="stylesheet" href="style.css">
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<button onclick="copy_export()">EXPORT</button>
+		<button onclick="copy_import()">IMPORT</button>
+		<br><br>
+		<input type="file" id="sav"/><br>
+		<button onclick="toSav()">NSAV -> SAV</button>
+		<button onclick="toNsav()">SAV -> NSAV</button>
+		<h2> How to use </h2>
+		export:<br>
+		1) Press the <fb>EXPORT</fb> button, it will copy a script to your clipboard<br>
+		2) Open <a href="https://notin.tokyo/nes/">https://notin.tokyo/nes/</a><br>
+		3) Load the game you want to export the save from<br>
+		4) Write "j" in the search bar and paste the copied script;<br>
+		the script should starts with "javascript:", then press enter*<br>
+		Now there should start a download of the .nsav file of your game, you can later import this file using the <fb>IMPORT</fb> button<br>
+		<br>
+		import:<br>
+		1) Press the <fb>IMPORT</fb> button, it will copy a script to your clipboard<br>
+		2) Open <a href="https://notin.tokyo/nes/">https://notin.tokyo/nes/</a><br>
+		3) Write "j" in the search bar and paste the copied script;	the script should starts with "javascript:", then press enter*<br>
+		4) A button will appear in the bottom left corner (couldn't do better, sorry)<br>
+		5) Press the button appeared in the bottom left corner and select the .nsav file previously exported<br>
+		Now the save should be imported, you can load up the game with the improted save data<br>
+		<br>
+		*paste script procedure:<br>
+		<img src="img/1.jpg"> -> <img src="img/2.jpg"> -> <img src="img/3.jpg">
+		<br><br>
+		note! .nsav files are different from .sav files used by most nes emulators, you can upload a save file and use the <fb>NSAV -> SAV</fb> button to convert a .nsav file to .sav and the <fb>SAV -> NSAV</fb> to convert from .sav to .nsav<br>
+		note 2! the name of the imported file should be the same name as the game you will load, adding .nsav;<br>
+		example: you want to import the save for the game you load with the file "game.nes", then the .nsav file should be name "game.nes.nsav"<br>
+		note 3! I am a really lazy person, the files extensions are case-sensitive, that means if your save file is named "game.SAV" it will not work, you have to rename it "game.sav"
+		<br><br>
+		nerd stuff:<br>
+		<a href="unminified_scripts.txt"> unminified scripts </a><br>
+		<a href="https://github.com/oswald641/Toploader-JSNES-saves-manager"> github </a>
+	</body>
+</html>

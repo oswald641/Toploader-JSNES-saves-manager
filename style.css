@@ -1,0 +1,39 @@
+button {
+	padding: 15px 25px;
+	font-size: 24px;
+	cursor: pointer;
+	color: #ad0101;
+	font-weight: bold;
+	background-color: #6f6e6c;
+	border: 2px solid black;
+	box-shadow: 0 -9px #292728;
+	margin-top: 10px;
+}
+
+button:hover {
+	background-color: #565455;
+}
+
+button:active {
+	background-color: #565455;
+	box-shadow: 0 -3px #292728;
+	transform: translateY(-6px);
+}
+
+button:focus {
+	border: 3px solid #ad0101;
+}
+
+body {
+	background-color: #747071;
+	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("https://notin.tokyo/nes/nesBackground2.png");
+	font-family: system-ui;
+}
+
+fb {
+	color: #ad0101;
+	font-weight: bold;
+	background-color: #6f6e6c;
+	border: 2px solid black;
+	box-shadow: 0 -6px #292728;
+}
